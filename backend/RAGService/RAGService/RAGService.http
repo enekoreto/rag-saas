@@ -1,0 +1,13 @@
+@RAGService_HostAddress = http://localhost:5138
+
+### Health check
+GET {{RAGService_HostAddress}}/health
+Accept: application/json
+
+### Ask question
+POST {{RAGService_HostAddress}}/api/queries/ask
+Content-Type: application/json
+
+{
+  "question": "What is this document about?"
+}
